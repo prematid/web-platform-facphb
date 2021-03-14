@@ -1,0 +1,86 @@
+<html>
+
+<head>
+  <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+</head>
+<style>
+  body {
+    background: orange;
+  }
+
+  .wrapper {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    /* grid-auto-rows: 100px; */
+    grid-auto-rows: minmax(100px, auto);
+
+  }
+
+  .nested {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 70px;
+    grid-gap: 1em;
+  }
+
+  .wrapper>div {
+    background: #eee;
+    padding: 1em;
+
+  }
+
+  .wrapper>div:nth-child(odd) {
+    background: #ddd;
+  }
+
+  .nested>div {
+    border: orange 2px solid;
+    padding: 1em;
+    background: orange;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <div>
+      Lorem Ipsum text.
+    </div>
+    <div>
+      Lorem Ipsum text.Mauris tempor dolor sit amet mauris blandit venenatis ut sed justo. Sed facilisis ac sem id
+      ultrices. Vestibulum sit amet risus non justo imperdiet vulputate. Vivamus eget nisi sit amet augue scelerisque
+      vulputate sit amet a risus. Duis vulputate mauris vulputate ipsum egestas posuere. Proin pretium pharetra dui eget
+      ornare. Sed tincidunt cursus sagittis. Fusce eu dignissim est. Sed id aliquet libero, et lacinia nibh. Sed auctor
+      velit mauris, vel sodales nisi scelerisque at.
+    </div>
+    <div class="nested">
+      <div> Lorem</div>
+      <div> Lorem</div>
+      <div> Lorem</div>
+      <div> Lorem</div>
+      <div> Lorem</div>
+      <div> Lorem</div>
+      <div> Lorem</div>
+      <div> Lorem</div>
+      <div> Lorem</div>
+      <div> Lorem</div>
+      <div> Lorem</div>
+      <div> Lorem</div>
+    </div>
+    <div>
+      Lorem Ipsum text.
+    </div>
+    <div>
+      Lorem Ipsum text.
+    </div>
+    <div>
+      Lorem Ipsum text.
+    </div>
+    <div>
+      Lorem Ipsum text.
+    </div>
+  </div>
+</body>
+
+</html>
